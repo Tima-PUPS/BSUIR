@@ -4,7 +4,6 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class MenuStart {
-//    public static Scanner inputt = new Scanner(System.in);
 
     public static String MySql_Insert(){
         InputData input = new InputData();
