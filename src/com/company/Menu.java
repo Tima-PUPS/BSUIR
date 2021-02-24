@@ -3,7 +3,7 @@ package com.company;
 import java.sql.*;
 import java.util.Scanner;
 
-public class MenuStart {
+public class Menu {
 
     public static String MySql_Insert(){
         InputData input = new InputData();
@@ -41,7 +41,7 @@ public class MenuStart {
         return Sql_Update;
     }
 
-    public static void M_Start() throws ClassNotFoundException, SQLException {
+    public static void Start() throws ClassNotFoundException, SQLException {
         try {
         Connection connection = null;
         Statement statement = null;
@@ -70,17 +70,17 @@ public class MenuStart {
             x = input.nextInt();
             switch (x) {
                 case 1:
-                    rows = statement.executeUpdate(MenuStart.MySql_Insert());
+                    rows = statement.executeUpdate(Menu.MySql_Insert());
                     System.out.printf("Added %d rows", rows);
                     System.out.println();
                     break;
                 case 2:
-                    rows = statement.executeUpdate(MenuStart.MySql_Delete());
+                    rows = statement.executeUpdate(Menu.MySql_Delete());
                     System.out.printf("%d row(s) deleted", rows);
                     System.out.println();
                     break;
                 case 3:
-                    rows = statement.executeUpdate(MenuStart.MySql_Updated() );
+                    rows = statement.executeUpdate(Menu.MySql_Updated() );
                     System.out.printf("Updated %d rows", rows);
                     System.out.println();
                     break;
